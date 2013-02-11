@@ -1,9 +1,9 @@
 # Gameplay concept
 Zombieblocks is planned to be a 2D arcade zombie game, where everyone is a simple block.
 There are three _classes_ planned (only the first two will be in v1):
-* the most important one, _strong YOU_
-* _strong Zombies_
-* _strong Civilians_
+* the most important one, __YOU__
+* __Zombies__
+* __Civilians__
 
 # Feature implementation
 As a one-man Developer who has although much free time, I'm too lazy and have to many hobbies and side projects so this game may take his time.
