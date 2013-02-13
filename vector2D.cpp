@@ -28,6 +28,7 @@ Vector2D Vector2D::basic()
 	double l = this->lenght();
 	this->x /= l;
 	this->y /= l;
+	return *this;
 }
 
 double Vector2D::lenght()

@@ -1,5 +1,5 @@
 SRCS=main.cpp vector2D.cpp player.cpp zombie.cpp
-OBJS=$(subst .cc,.o,$(SRCS))
+OBJS=$(subst .cpp,.o,$(SRCS))
 
 CXX = g++
 LD = ld
@@ -15,6 +15,6 @@ zombieblocks: $(OBJS)
 	$(CXX) $(CFLAGS) -c -o $@ $^
 
 clean:
-	rm *.o
+	rm $(OBJS)
 
 .PHONY: clean

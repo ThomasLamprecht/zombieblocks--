@@ -8,9 +8,11 @@ int main()
 {
 	Player p;// = Player();
 	Zombie z;// = Zombie();
-
-	cout << "Player: w,h: " << p.w << "," << p.h << "\n";
-	cout << "Zombie: w,h: " << z.w << "," << z.h << "\n";
+	p.setX(5);p.setY(3);
+	z.setX(15);z.setY(13);
+	
+	cout << "Player: w,h: " << p.getX() << "," << p.getY() << "\n";
+	cout << "Zombie: w,h: " << z.getX() << "," << z.getY() << "\n";
 	
 	return 0;
 }
