@@ -19,6 +19,8 @@ public:
 	double operator * (Vector2D); // cross product of two vectors
 	Vector2D operator * (double); // multiplies x and y with a scalar
 	Vector2D operator / (double); // dividides x and y with a scalar
+	static double lenght(Vector2D v);
+	static Vector2D basic(Vector2D v);
 };
 
 #endif
