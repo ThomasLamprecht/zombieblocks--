@@ -2,7 +2,30 @@
 #define GRAPHICS_H
 
 #include <SDL/SDL.h>
-
+/**
+ * @file	include/graphics.hpp
+ * @author	Thomas Lamprecht <tom@gamer-source.org>
+ * @version	0.01b
+ *
+ * @section LICENSE
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details at
+ * http://www.gnu.org/copyleft/gpl.html
+ *
+ * @section DESCRIPTION
+ *
+ * The Graphics class represents the graphic abstraction for the game.
+ * It uses either OpenGL >= 3.2 or as fallback OpenGL >= 1.2
+ * or as last fallback the SDL Software Renderer.
+ */
 class Graphics
 {
 private:
