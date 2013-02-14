@@ -11,8 +11,8 @@ int main()
 	p.setX(5);p.setY(3);
 	z.setX(15);z.setY(13);
 	
-	cout << "Player: w,h: " << p.getX() << "," << p.getY() << "\n";
-	cout << "Zombie: w,h: " << z.getX() << "," << z.getY() << "\n";
+	cout << "Player: x,y: " << p.getX() << "," << p.getY() << endl;
+	cout << "Zombie: x,y: " << z.getX() << "," << z.getY() << endl;
 	
 	return 0;
 }

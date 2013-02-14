@@ -1,10 +1,7 @@
 #include "include/graphics.hpp"
 
-static Graphics Graphics::g = null;
-
-static Graphics Graphics::getInstanceOf()
+Graphics& Graphics::getInstanceOf()
 {
-	if(g==null)
-		g = new Graphics();
-	return g;
+	static Graphics instance;
+	return instance;
 }
