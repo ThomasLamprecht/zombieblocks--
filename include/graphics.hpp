@@ -29,7 +29,7 @@
 class Graphics
 {
 private:
-	Graphics() {}; // singleton stuff
+	Graphics() : render_type(SDL_SOFT) {}; // singleton stuff
 	Graphics(const Graphics&) {}             // nicht kopierbar
 	Graphics& operator=(const Graphics&) { return *this; }  // nicht zuweisbar
 	~Graphics() {};
@@ -38,7 +38,7 @@ private:
 	SDL_Surface *screen;
 
 public:
-	const static uint8_t SDL_SOFT=0, OPENGL=1;
+	const static uint8_t SDL_SOFT=0, OPENGL_1_2=1, OPENGL_3_2=2;
 	bool init(uint8_t TYPE);
 
 	static Graphics& getInstanceOf();
