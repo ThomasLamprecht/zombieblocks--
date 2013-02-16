@@ -5,18 +5,15 @@ void Config::init()
 	
 }
 
-
 void Config::init(string path)
 {
 	
 }
 
-
 void Config::init(int difficulty)
 {
 	
 }
-
 
 void Config::save()
 {
@@ -24,27 +21,19 @@ void Config::save()
 }
 
 
-void Config::save(string path)
-{
-	
-}
-
-
-
-
 double Config::getDouble(int id)
 {
-	return 0;
+	return double_v[id];
 }
 
 
 int Config::getInt(int id)
 {
-	return 0;
+	return int_v[id];
 }
 
 
 string Config::getString(int id)
 {
-	return 0;
+	return string_v[id];
 }

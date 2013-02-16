@@ -6,6 +6,7 @@ using namespace std;
 
 int main()
 {
+	Config::init();
 	Player p;// = Player();
 	Zombie z;// = Zombie();
 	p.setX(5);p.setY(3);
