@@ -2,6 +2,8 @@
 #define GRAPHICS_H
 
 #include <SDL/SDL.h>
+#include "log.hpp"
+
 /**
  * @file	include/graphics.hpp
  * @author	Thomas Lamprecht <tom@gamer-source.org>
@@ -38,7 +40,7 @@ private:
 	SDL_Surface *screen;
 
 public:
-	const static uint8_t SDL_SOFT=0, OPENGL_1_2=1, OPENGL_3_2=2;
+	const static uint8_t SDL_SOFT=0, OPENGL_1_2=1, OPENGL_3_2=2, OPENGL_HIGHEST=3;
 	bool init(uint8_t TYPE);
 
 	static Graphics& getInstanceOf();

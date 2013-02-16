@@ -49,7 +49,18 @@ Graphics& Graphics::getInstanceOf()
  */
 bool Graphics::init(uint8_t TYPE)
 {
-	
+	if(TYPE == OPENGL_1_2)
+	{
+		
+	}
+	else if(TYPE == OPENGL_3_2)
+	{
+		
+	}	
+	else if(TYPE == SDL_SOFT)
+	{
+		
+	}
 	return true;
 }
 

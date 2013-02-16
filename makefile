@@ -1,4 +1,4 @@
-SRCS=main.cpp vector2D.cpp player.cpp zombie.cpp graphics.cpp
+SRCS=main.cpp vector2D.cpp player.cpp zombie.cpp graphics.cpp log.cpp config.cpp
 OBJS=$(subst .cpp,.o,$(SRCS))
 
 CXX = g++

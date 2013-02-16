@@ -1,6 +1,12 @@
 #ifndef CONFIG_H
 #define CONFIG_H
-#include <string.h>
+
+#include <stdint.h>
+#include <string>
+#include <vector> 
+
+using namespace std;
+
 /**
  * @file	include/config.hpp
  * @author	Thomas Lamprecht <tom@gamer-source.org>
@@ -29,7 +35,23 @@ class Config
 {
 private:
 	Config();
+
+	static vector<string> string_v;
+	static vector<int> int_v;
+	static vector<double> double_v;
+
 public:
+	static void init();
+	static void init(string path);
+	static void init(int difficulty);
+	static void save();
+	static void save(string path);
+	
+
+	static double getDouble(int id);
+	static int getInt(int id);
+	static string getString(int id);
+	
 	// At the moment this values are only approx. correct, mostly they are just guessed ;)
 	const static int PLAYER_WIDTH=6, PLAYER_HEIGHT=6;
 	const static double PLAYER_SPEED=1;
@@ -38,6 +60,8 @@ public:
 	const static int CIVILIAN_WIDTH=5, CIVILIAN_HEIGHT=5;
 	const static double CIVILIAN_SPEED=1;
 
+	static string LOG_FILE; // = "log.txt";
+	
 	//static bool init(string path);
 	static void resetToDefault(uint8_t difficulty);
 };
