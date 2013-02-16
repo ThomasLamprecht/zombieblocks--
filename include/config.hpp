@@ -53,14 +53,20 @@ public:
 	static string getString(int id);
 	
 	// At the moment this values are only approx. correct, mostly they are just guessed ;)
-	const static int PLAYER_WIDTH=6, PLAYER_HEIGHT=6;
-	const static double PLAYER_SPEED=1;
-	const static int ZOMBIE_WIDTH=5, ZOMBIE_HEIGHT=5;
-	const static double ZOMBIE_SPEED=1;
-	const static int CIVILIAN_WIDTH=5, CIVILIAN_HEIGHT=5;
-	const static double CIVILIAN_SPEED=1;
+	const static int
+	PLAYER_WIDTH		=	0, 
+	PLAYER_HEIGHT		=	1,
+	PLAYER_SPEED		=	2,
+	ZOMBIE_WIDTH		=	3,
+	ZOMBIE_HEIGHT		=	4,
+	ZOMBIE_SPEED		=	5,
+	CIVILIAN_WIDTH	=	6,
+	CIVILIAN_HEIGHT	=	7,
+	CIVILIAN_SPEED	=	8,
 
-	static string LOG_FILE; // = "log.txt";
+// 	Strings
+	const static int
+	LOG_FILE				=	0;
 	
 	//static bool init(string path);
 	static void resetToDefault(uint8_t difficulty);
