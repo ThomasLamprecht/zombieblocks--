@@ -6,14 +6,17 @@ using namespace std;
 
 int main()
 {
-	Config::init();
+	Config *cfg = &Config::instance();
 	Player p;// = Player();
 	Zombie z;// = Zombie();
+
 	p.setX(5);p.setY(3);
 	z.setX(15);z.setY(13);
-	
+
+	cfg->init();
+
 	cout << "Player: x,y: " << p.getX() << "," << p.getY() << endl;
 	cout << "Zombie: x,y: " << z.getX() << "," << z.getY() << endl;
-	
+
 	return 0;
 }

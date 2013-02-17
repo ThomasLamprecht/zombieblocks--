@@ -1,5 +1,11 @@
 #include "include/config.hpp"
 
+Config& Config::instance()
+{
+	static Config instance;
+	return instance;
+}
+
 void Config::init()
 {
 	
@@ -23,17 +29,17 @@ void Config::save()
 
 double Config::getDouble(int id)
 {
-	return double_v[id];
+	return double_v.at(id);
 }
 
 
 int Config::getInt(int id)
 {
-	return int_v[id];
+	return int_v.at(id);
 }
 
 
 string Config::getString(int id)
 {
-	return string_v[id];
+	return string_v.at(id);
 }

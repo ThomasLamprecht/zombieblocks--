@@ -34,23 +34,27 @@ using namespace std;
 class Config
 {
 private:
-	Config();
+	Config() {};
+	Config(const Config&);             // nicht kopierbar
+	Config& operator=(const Config&);// { return *this; }  // nicht zuweisbar
 
-	static vector<string> string_v;
-	static vector<int> int_v;
-	static vector<double> double_v;
+	vector<string> string_v;
+	vector<int> int_v;
+	vector<double> double_v;
 
 public:
-	static void init();
-	static void init(string path);
-	static void init(int difficulty);
-	static void save();
-	static void save(string path);
+	static Config& instance();
+	
+	void init();
+	void init(string path);
+	void init(int difficulty);
+	void save();
+	void save(string path);
 	
 
-	static double getDouble(int id);
-	static int getInt(int id);
-	static string getString(int id);
+	double getDouble(int id);
+	int getInt(int id);
+	string getString(int id);
 	
 	// At the moment this values are only approx. correct, mostly they are just guessed ;)
 	const static int
@@ -62,13 +66,13 @@ public:
 	ZOMBIE_SPEED		=	5,
 	CIVILIAN_WIDTH	=	6,
 	CIVILIAN_HEIGHT	=	7,
-	CIVILIAN_SPEED	=	8,
+	CIVILIAN_SPEED	=	8;
 
 // 	Strings
 	const static int
 	LOG_FILE				=	0;
 	
 	//static bool init(string path);
-	static void resetToDefault(uint8_t difficulty);
+	void resetToDefault(uint8_t difficulty);
 };
 #endif
