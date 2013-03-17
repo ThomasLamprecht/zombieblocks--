@@ -51,6 +51,9 @@ public:
 	void save();
 	void save(string path);
 	
+	void set(double value, uint32_t index);
+	void set(int value, uint32_t index);
+	void set(string value, uint32_t index);
 
 	double getDouble(int id);
 	int getInt(int id);

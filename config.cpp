@@ -26,6 +26,18 @@ void Config::save()
 	
 }
 
+void Config::set(double value, uint32_t index)
+{
+	double_v.at(index) = value;
+}
+void Config::set(int value, uint32_t index)
+{
+	int_v.at(index) = value;
+}
+void Config::set(string value, uint32_t index)
+{
+	string_v.at(index) = value;
+}
 
 double Config::getDouble(int id)
 {
