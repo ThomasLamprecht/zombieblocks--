@@ -3,6 +3,7 @@
 Player::Player()
 {
 	x=y=0;
+	hp = 100;
 	w = Config::PLAYER_WIDTH;
 	h = Config::PLAYER_HEIGHT;
 }

@@ -8,7 +8,7 @@
 class Block
 {
 protected: // TODO! incosistent...
-	int w,h;
+	int w,h, hp;
 	double speed; // will be multiplicated with the direction basis vector
 	double x,y; // x and y as double, should be only rounded when actually drawn
 	Vector2D direction;
