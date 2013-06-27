@@ -6,12 +6,12 @@ There are three _classes_ planned (only the first two will be in v1):
 * __Civilians__
 
 # Feature implementation
-As a one-man Developer who has although much free time, I'm too lazy and have to many hobbies and side projects so this game may take his time.
-I'll try to make first a mostly playable version and commit every change I've made.
+As a one-man Developer who has, although, much free time, I'm too lazy and have to many hobbies and side projects so this game may take his time.
+I'll try to make first a basic playable version and commit every change I've made.
 Everyone is welcome to test it, open issues or even write his own code and push it in the repo.
 I'll really appreciate that and you (as wanted) will be naturally mentioned here with your website/blog/whatever! ;)  
   
-SDL will be used to implement everything. The game should be work with OpenGL and fall back to the SDL Renderer as needed!
+SDL will be used to implement everything and we will use the Irrlicht engine (maybe whitout SDL). The game should be work with OpenGL and fall back to the SDL Renderer as needed!
 
 # License
 This is (part of) a 2D Arcade Game
