@@ -8,7 +8,7 @@ DEBUG = -g
 CFLAGS = -Wall -D_USE_MATH_DEFINES -I/usr/include/SDL -O2 $(DEBUG)
 LDFLAGS = -lm -lSDL $(DEBUG)
 
-zombieblocks: $(OBJS)
+all: $(OBJS)
 	$(CXX) $(LDFLAGS) -o $@ $^
 
 %.o: %.cpp
