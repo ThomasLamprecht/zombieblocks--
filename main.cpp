@@ -27,9 +27,23 @@ int main()
     glMatrixMode(GL_PROJECTION|GL_MODELVIEW);
     glLoadIdentity();
     glOrtho(-320,320,240,-240,0,1);
+    glShadeModel( GL_SMOOTH );
+    /* Depth buffer setup */
+    glClearDepth( 1.0f );
 
+    /* Enables Depth Testing */
+    glEnable( GL_DEPTH_TEST );
+    glEnable (GL_LINE_SMOOTH);
+    glEnable (GL_POINT_SMOOTH);
+    glEnable (GL_BLEND);
+    glBlendFunc (GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
+
+    /* The Type Of Depth Test To Do */
+    glDepthFunc( GL_LEQUAL );
     // ... can be used alongside SDL2.
     float x = 0.0, y = 30.0;
+
+    cout << glGetString(GL_VERSION) << endl;
 
     SDL_Event event;
     Uint8 done = 0;
@@ -43,15 +57,16 @@ int main()
 
         // Draw:
         glClearColor(0,0,0,1); // Use OpenGL commands, see the OpenGL reference.
+
         glClear(GL_COLOR_BUFFER_BIT); // clearing screen
-        glRotatef(10.0,0.0,0.0,1.0);  // rotating everything
+        glRotatef(1.0,0.0,0.0,1.0);  // rotating everything
         // Note that the glBegin() ... glEnd() OpenGL style used below is actually
         // obsolete, but it will do for example purposes. For more information, see
         // SDL_GL_GetProcAddress() or find an OpenGL extension loading library.
         glBegin(GL_TRIANGLES); // drawing a multicolored triangle
-        glColor3f(1.0,0.0,0.0); glVertex2f(x, y+90.0);
-        glColor3f(0.0,1.0,0.0); glVertex2f(x+90.0, y-90.0);
-        glColor3f(0.0,0.0,1.0); glVertex2f(x-90.0, y-90.0);
+        glColor3f(1.0, 0.0, 0.0); glVertex2f(x, y+180.0);
+        glColor3f(0.0, 1.0, 0.0); glVertex2f(x+180.0, y-180.0);
+        glColor3f(0.0, 0.0, 1.0); glVertex2f(x-180.0, y-180.0);
         glEnd();
 
         SDL_GL_SwapWindow(window);  // Swap the window/buffer to display the result.
@@ -64,7 +79,7 @@ int main()
 
     // Done! Close the window, clean-up and exit the program.
     SDL_DestroyWindow(window);
-    SDL_Quit();
+
 
 
 
@@ -77,6 +92,6 @@ int main()
 
     cout << "Player: x,y: " << p.getX() << "," << p.getY() << endl;
     cout << "Zombie: x,y: " << z.getX() << "," << z.getY() << endl;
-
+    SDL_Quit();
     return 0;
 }
